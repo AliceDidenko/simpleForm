@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html leng='ru'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="data.php" method="POST" name="simpleForm" id="simpleForm">
+            <input type="text"   id="first_name" name="first_name" required>
+            <input type="text"   id="last_name"  name="last_name" required>
+            <input type="tel"    id="phone"      name="phone" required>
+            <input type="email"  id="to"         name="to" required>
+            <input type="submit" id="submit"     name="submit">
+        </form>
+        <div type='submit' id="sendMessage" value='отправить'></div>
+        <script src="script.js"></script>
+    </body>
+</html>
