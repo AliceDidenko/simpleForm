@@ -21,23 +21,24 @@ form.onsubmit = function(e) {
     let jsonStr = JSON.stringify(data);
     console.log(data, jsonStr);
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    // xhr.open('POST', url, true);
-    // xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8'); //Передает правильный заголовок в запросе
-    // xhr.onratechange = function(){ //Вызывает функцию при смене состояния
-    //     if (xhr.readyState != 4) return;
-    //     if (xhr.status != 200) {
-    //         alert(xhr.status + ':' + xhr.statusText);
-    //         sendMessage.innerHTML = xhr.statusText;
-    //     } else {
-    //         // Запрос завершен. Здесь можно обрабатывать результат.
-    //         console.log(xhr.response);
-    //         alert(xhr.responseText);
-    //         sendMessage.innerHTML = xhr.responseText;
-    //         form.reset();
-    //         // очищение формы
-    //     }
-    // }
+    //xhr.open('GET', url, true);
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8'); //Передает правильный заголовок в запросе
+    xhr.onratechange = function(){ //Вызывает функцию при смене состояния
+        if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+            alert(xhr.status + ':' + xhr.statusText);
+            sendMessage.innerHTML = xhr.statusText;
+        } else {
+            // Запрос завершен. Здесь можно обрабатывать результат.
+            console.log(xhr.response);
+            alert(xhr.responseText);
+            sendMessage.innerHTML = xhr.responseText;
+            form.reset();
+            // очищение формы
+        }
+    }
     console.log(xhr.statusText);
     xhr.send(jsonStr);
+    xhr.send('Hello world!');
 }
