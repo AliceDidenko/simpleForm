@@ -2,7 +2,7 @@ let sendMessage = document.getElementById("sendMessage");
 let form = document.getElementById("simpleForm"),
     url = form.action;
 
-function deleteName(e) {
+form.onsubmit = function(e) {
     e.preventDefault();
 
     let data = {};
@@ -36,6 +36,6 @@ function deleteName(e) {
             // очищение формы
         }
     }
-    xhr.send(jsonStr);
     console.log(xhr.statusText);
+    xhr.send(jsonStr);
 }
