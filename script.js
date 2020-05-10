@@ -37,4 +37,5 @@ function deleteName(e) {
         }
     }
     xhr.send(jsonStr);
+    console.log(xhr.statusText);
 }
