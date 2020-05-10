@@ -1,6 +1,6 @@
 let sendMessage = document.getElementById("sendMessage");
-let form = document.getElementById("simpleForm"),
-    url = form.action;
+let form = document.getElementById("simpleForm");
+//let url = form.action;
 
 form.onsubmit = function(e) {
     e.preventDefault();
@@ -22,7 +22,7 @@ form.onsubmit = function(e) {
     console.log(data, jsonStr);
     let xhr = new XMLHttpRequest();
     //xhr.open('GET', url, true);
-    xhr.open('POST', url, true);
+    xhr.open('POST', "data.php", true);
 
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8'); //Передает правильный заголовок в запросе
     xhr.onratechange = function(){ //Вызывает функцию при смене состояния
