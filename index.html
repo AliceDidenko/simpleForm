@@ -16,5 +16,19 @@
         </form>
         <div type='submit' id="sendMessage" value='отправить'></div>
         <script src="script.js"></script>
+        <script>
+            'use strict';
+
+            let x = new XMLHttpRequest();
+            x.open('GET', 'data.json');
+            x.responseType = 'json';
+            x.send();
+            
+            // тело ответа {"сообщение": "Привет, мир!"}
+            x.onload = function() {
+              let responseObj = x.response;
+              alert(responseObj.message); // Привет, мир!
+            };
+            </script>
     </body>
 </html>
