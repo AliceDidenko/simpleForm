@@ -21,7 +21,7 @@ function deleteName(e) {
     let jsonStr = JSON.stringify(data);
     console.log(data, jsonStr);
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', url, true);
+    xhr.open('GET', url, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.onratechange = function(){
         if (xhr.readyState != 4) return;
