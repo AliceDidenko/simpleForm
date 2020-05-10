@@ -38,7 +38,6 @@ form.onsubmit = function(e) {
             // очищение формы
         }
     }
-    console.log(xhr.statusText);
+    console.log("АААААА ПОЧЕМУ Я БОМ-БОМ ААААААА xhr.statusText", xhr.statusText);
     xhr.send(jsonStr);
-    xhr.send('Hello world!');
 }
