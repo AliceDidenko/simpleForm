@@ -2,7 +2,7 @@ let sendMessage = document.getElementById("sendMessage");
 let form = document.getElementById("simpleForm"),
     url = form.action;
 
-form.onsubmit = function(e) {
+function deleteName(e) {
     e.preventDefault();
 
     let data = {};
