@@ -23,6 +23,7 @@ form.onsubmit = function(e) {
     let xhr = new XMLHttpRequest();
     //xhr.open('GET', url, true);
     xhr.open('POST', url, true);
+    console.log(xhr.open('POST', url, true));
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8'); //Передает правильный заголовок в запросе
     xhr.onratechange = function(){ //Вызывает функцию при смене состояния
         if (xhr.readyState != 4) return;
@@ -38,6 +39,6 @@ form.onsubmit = function(e) {
             // очищение формы
         }
     }
-    console.log("АААААА ПОЧЕМУ Я БОМ-БОМ ААААААА xhr.statusText", xhr.statusText);
+    console.log("АААААА ПОЧЕМУ Я ТАКАЯ БОМ-БОМ ААААААА xhr.statusText: ", xhr.statusText);
     xhr.send(jsonStr);
 }
